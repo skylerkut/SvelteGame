@@ -16,10 +16,10 @@ import adapter from '@sveltejs/adapter-static';
 export default {
   kit: {
     adapter: adapter({
-      fallback: 'app.html'  // Ensures the app works with client-side routing
+      fallback: 'index.html'  // Ensures the app works with client-side routing
     }),
     paths: {
-      base: process.env.NODE_ENV === "production" ? "/SvelteGame" : "",  // Update with your repo name
+      base: process.env.NODE_ENV === "production" ? "/SvelteGame" : "", 
     },
     prerender: {
       entries: ['*']  // Ensures all static pages are prerendered
